@@ -30,6 +30,19 @@ python main.py --mode=train
 python main.py --mode=test --load_from=/path/to/your/checkpoint/directory
 ```
 
+# Run with Docker (Nvidia GPU)
+1. Build the Docker Image
+Run the following command to build the Docker image. Replace bevplace_docker with your desired image name if needed:
+```
+docker build -t bevplace_docker .
+```
+
+2. Start docker container
+Use the provided script to start the Docker container. Ensure the script has executable permissions:
+```
+chmod +x run-bevplace2.sh
+./run-bevplace2.sh
+```
 
 # Evaluate your own data
 Organize your data following the description in [data.md](./data/data.md) and customize your dataloader following kitti_dataset.py. Then evaluate the performance with the script main.py
